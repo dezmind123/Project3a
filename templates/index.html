@@ -1,0 +1,15 @@
+<!-- index.html -->
+<form method="POST" action="/get_chart">
+    <label for="symbol">Select Stock Symbol:</label>
+    <select name="symbol" id="symbol">
+        <!-- Options will be dynamically populated -->
+    </select>
+    <!-- Add additional inputs for chart type, time series, start date, and end date -->
+    <button type="submit">Get Chart</button>
+</form>
+
+<select name="symbol" id="symbol">
+    {% for symbol in symbols %}
+        <option value="{{ symbol }}">{{ symbol }}</option>
+    {% endfor %}
+</select>
